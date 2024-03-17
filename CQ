@@ -6552,7 +6552,7 @@ Stats:Toggle("Max Point",false,function(value)
 	_G.MaxPoint = value
 end)
 PointStats = 1
-Main:Slider("Point", 1, 100,PointStats,function(a)
+main:Slider("Point", 1, 100,PointStats,function(a)
 	PointStats = a
 end)
 
