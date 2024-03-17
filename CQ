@@ -1,3 +1,5 @@
+do
+wait(5)
 local RadientPaid = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -4880,6 +4882,10 @@ main:Toggle("Auto Electric Claw V2",false,function(x)
 	_G.AutoElectricClawV2 = x
 end)
 
+main:Slider("Point", 1, 100,PointStats,function(a)
+	PointStats = a
+end)
+
 spawn(function()
 	while wait() do wait()
 		if _G.AutoElectricClawV2 then
@@ -6552,9 +6558,7 @@ Stats:Toggle("Max Point",false,function(value)
 	_G.MaxPoint = value
 end)
 PointStats = 1
-main:Slider("Point", 1, 100,PointStats,function(a)
-	PointStats = a
-end)
+
 
 spawn(function()
 	while wait(.1) do
@@ -8758,3 +8762,4 @@ end
 end)
 end
 end)
+end
